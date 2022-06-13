@@ -10,6 +10,11 @@ export const Container = styled.div`
   padding: 21px 38px 14px 23px;
 `
 
+export const ContainerTitle = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 export const Title = styled.h1`
   color: #5D405C;
   font-family: 'Montserrat', sans-serif;

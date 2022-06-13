@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import { MdInfo } from 'react-icons/md'
 
-import { Container, Title } from './styles'
+import { Container, ContainerTitle, Title } from './styles'
 
 interface IGraphicBarProps {
   data: Number[]
@@ -54,8 +54,11 @@ export function GraphicBar(props: IGraphicBarProps) {
 
   return (
     <Container>
-      <Title>Barras</Title>
-      <MdInfo color="#19D7AA" />
+      <ContainerTitle>
+        <Title>Barras</Title>
+        <MdInfo color="#19D7AA" size={15.63} />
+      </ContainerTitle>
+
       {graphicSettings?.series && graphicSettings?.options && (
         <ReactApexChart
           options={graphicSettings.options}
