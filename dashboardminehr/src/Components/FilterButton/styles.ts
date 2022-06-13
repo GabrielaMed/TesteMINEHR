@@ -10,7 +10,13 @@ export const Button = styled.button`
     font-weight: 600;
     line-height: 17px;
 
-    width: 120px;
+    width: 100px;
     height: 40px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+        margin-right: 13.35px;
+    }
 `;
