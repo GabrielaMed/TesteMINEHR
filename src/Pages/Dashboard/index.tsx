@@ -1,8 +1,9 @@
+import { ApexOptions } from 'apexcharts'
 import React from 'react'
-import { FilterButton } from '../FilterButton'
-import { GraphicBar } from '../GraphicBar'
-import { GraphicScatter } from '../GraphicScatter'
-
+import { FilterButton } from '../../Components/FilterButton'
+import { GraphicBar } from '../../Components/GraphicBar'
+import { GraphicScatter } from '../../Components/GraphicScatter'
+import { Header } from '../../Components/Header'
 import { Container, HoldTitleAndSub, Title, Subtitle, Graphics } from './styles'
 
 export function Dashboard() {
@@ -132,11 +133,12 @@ export function Dashboard() {
           [16.4, 0]
         ]
       }
-    ] as ApexAxisChartSeries
+    ] as ApexOptions['series']
   }
 
   return (
     <>
+      <Header />
       <Container>
         <HoldTitleAndSub>
           <Title>Dashboard</Title>

@@ -1,8 +1,9 @@
 import { ApexOptions } from 'apexcharts'
 import { useEffect, useState } from 'react'
 import ReactApexChart from 'react-apexcharts'
+import { MdInfo } from 'react-icons/md'
 
-import { Container } from './styles'
+import { Container, InfoContainer } from './styles'
 
 interface IGraphicBarProps {
   data: Number[]
@@ -10,13 +11,13 @@ interface IGraphicBarProps {
 }
 
 interface IGraphicProps {
-  series?: ApexAxisChartSeries
+  series?: ApexOptions['series']
   options?: ApexOptions
 }
 
 export function GraphicBar(props: IGraphicBarProps) {
   const [graphicSettings, setGraphicSettings] = useState<IGraphicProps>({
-    series: {} as ApexAxisChartSeries,
+    series: [],
     options: {} as ApexOptions
   })
 
@@ -26,7 +27,7 @@ export function GraphicBar(props: IGraphicBarProps) {
         {
           data: props.data
         }
-      ] as ApexAxisChartSeries,
+      ] as ApexOptions['series'],
       options: {
         title: {
           text: 'Barras',
@@ -67,6 +68,9 @@ export function GraphicBar(props: IGraphicBarProps) {
 
   return (
     <Container>
+      <InfoContainer>
+        <MdInfo color={'#19D7AA'} size={15.63} />
+      </InfoContainer>
       <ReactApexChart
         options={graphicSettings.options}
         series={graphicSettings.series}

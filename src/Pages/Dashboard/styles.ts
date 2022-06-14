@@ -38,7 +38,8 @@ export const Subtitle = styled.h2`
 export const Graphics = styled.section`
     width: 94vw;
     margin-right: 24px;
-    margin-left: 28px;
+    margin-left: 24px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 `

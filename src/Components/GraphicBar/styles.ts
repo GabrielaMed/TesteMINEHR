@@ -8,21 +8,18 @@ export const Container = styled.div`
   width: 570px;
   height: 300px;
   padding: 21px 38px 14px 23px;
+  margin-top: 16px;
+
+  .apexcharts-toolbar svg{
+    fill: #5D405C !important;
+  }
 `
 
-export const ContainerTitle = styled.div`
-  display: flex;
-  align-items: center;
-
+export const InfoContainer = styled.div`
+  display: block;
   svg{
-      margin-left: 15.19px;
-    }
-`
-
-export const Title = styled.h1`
-  color: #5D405C;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+    position: relative;
+    margin-left: 80px;
+    top: 24px;
+  }
 `

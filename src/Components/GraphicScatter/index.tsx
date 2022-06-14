@@ -1,16 +1,17 @@
 import { ApexOptions } from 'apexcharts'
 import { useEffect, useState } from 'react'
 import ReactApexChart from 'react-apexcharts'
+import { MdInfo } from 'react-icons/md'
 
-import { Container } from './styles'
+import { Container, InfoContainer } from './styles'
 
 interface IGraphicScatterProps {
-  series?: ApexAxisChartSeries
+  series?: ApexOptions['series']
 }
 
 export function GraphicScatter(props: IGraphicScatterProps) {
   const [graphicSettings, setGraphicSettings] = useState<IGraphicScatterProps>({
-    series: {} as ApexAxisChartSeries
+    series: []
   })
   const graphicOptions = {
     title: {
@@ -63,6 +64,9 @@ export function GraphicScatter(props: IGraphicScatterProps) {
 
   return (
     <Container>
+      <InfoContainer>
+        <MdInfo color={'#19D7AA'} size={15.63} />
+      </InfoContainer>
       <ReactApexChart
         options={graphicOptions}
         series={graphicSettings?.series}

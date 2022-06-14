@@ -1,17 +1,15 @@
-import React from 'react';
-import './App.css';
-import { Dashboard } from './Components/Dashboard';
-//import { Dashboard } from './Components/Dashboard';
-import { Header } from './Components/Header';
+import React from 'react'
+import './App.css'
+import { Dashboard } from './Pages/Dashboard'
+import { Header } from './Components/Header'
 
 function App() {
   return (
     <>
-      <Header/>
-      <Dashboard/>
-
+      <Header />
+      <Dashboard />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
