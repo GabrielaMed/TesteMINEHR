@@ -1,9 +1,8 @@
 import { ApexOptions } from 'apexcharts'
 import { useEffect, useState } from 'react'
 import ReactApexChart from 'react-apexcharts'
-import { MdInfo } from 'react-icons/md'
 
-import { Container, Title } from './styles'
+import { Container } from './styles'
 
 interface IGraphicScatterProps {
   series?: ApexAxisChartSeries
@@ -27,7 +26,7 @@ export function GraphicScatter(props: IGraphicScatterProps) {
       }
     },
     chart: {
-      height: 350,
+      height: 300,
       toolbar: {
         tools: {
           download: true,
@@ -37,7 +36,7 @@ export function GraphicScatter(props: IGraphicScatterProps) {
           zoomout: false,
           pan: false,
           reset: false,
-          customIcons: []
+          customIcons: {}
         },
         offsetY: 0
       }
@@ -64,7 +63,6 @@ export function GraphicScatter(props: IGraphicScatterProps) {
 
   return (
     <Container>
-      <MdInfo color="#19D7AA" size={15.63} />
       <ReactApexChart
         options={graphicOptions}
         series={graphicSettings?.series}

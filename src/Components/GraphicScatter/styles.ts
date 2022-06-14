@@ -10,11 +10,3 @@ export const Container = styled.div`
   padding: 21px 38px 14px 23px;
 
 `
-
-export const Title = styled.div`
-  color: #5D405C;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-`
