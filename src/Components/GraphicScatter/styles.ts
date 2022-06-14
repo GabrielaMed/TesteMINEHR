@@ -9,6 +9,10 @@ export const Container = styled.div`
   height: 300px;
   padding: 21px 38px 14px 23px;
   margin-top: 16px;
+
+  .apexcharts-toolbar svg{
+    fill: #5D405C !important;
+  }
 `
 export const InfoContainer = styled.div`
   display: block;
