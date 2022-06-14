@@ -16,7 +16,10 @@ interface IGraphicProps {
 }
 
 export function GraphicBar(props: IGraphicBarProps) {
-  const [graphicSettings, setGraphicSettings] = useState<IGraphicProps>()
+  const [graphicSettings, setGraphicSettings] = useState<IGraphicProps>({
+    series: {} as ApexAxisChartSeries,
+    options: {} as ApexOptions
+  })
 
   useEffect(() => {
     const newState = {
@@ -30,7 +33,6 @@ export function GraphicBar(props: IGraphicBarProps) {
           type: 'bar',
           toolbar: {
             show: true,
-            color: '#5D405C',
             offsetY: 0
           }
         },
@@ -59,14 +61,12 @@ export function GraphicBar(props: IGraphicBarProps) {
         <MdInfo color="#19D7AA" size={15.63} />
       </ContainerTitle>
 
-      {graphicSettings?.series && graphicSettings?.options && (
-        <ReactApexChart
-          options={graphicSettings.options}
-          series={graphicSettings.series}
-          type="bar"
-          height={300}
-        />
-      )}
+      <ReactApexChart
+        options={graphicSettings.options}
+        series={graphicSettings.series}
+        type="bar"
+        height={300}
+      />
     </Container>
   )
 }

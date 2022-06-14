@@ -151,7 +151,7 @@ export function Dashboard() {
           data={graphicBarData.data}
           categories={graphicBarData.categories}
         ></GraphicBar>
-        {/* <GraphicScatter series={graphicScatterData}></GraphicScatter> */}
+        <GraphicScatter series={graphicScatterData.series}></GraphicScatter>
       </Graphics>
     </>
   )

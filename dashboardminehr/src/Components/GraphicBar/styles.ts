@@ -13,6 +13,10 @@ export const Container = styled.div`
 export const ContainerTitle = styled.div`
   display: flex;
   align-items: center;
+
+  svg{
+      margin-left: 15.19px;
+    }
 `
 
 export const Title = styled.h1`
